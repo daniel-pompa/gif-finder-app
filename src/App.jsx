@@ -1,7 +1,24 @@
 import { useState } from 'react';
+import { AddCategory } from './components/AddCategory';
 
 function App() {
-  const [categories, setCategories] = useState(['Laboris Proident']);
+  const [categories, setCategories] = useState(['Dragon Ball']);
+
+  /**
+   * Handles the addition of new categories.
+   * Checks if the new category already exists (case-insensitive).
+   * Adds the new category to the beginning of the array if it does not exist.
+   *
+   * @param {String} newCategory - The new category to be added.
+   */
+  const handleAddCategory = newCategory => {
+    // Validate that categories are not repeated
+    const categoryExists = categories.find(element => {
+      return element.toLowerCase() === newCategory.toLowerCase();
+    });
+    if (categoryExists) return;
+    setCategories([newCategory, ...categories]);
+  };
 
   return (
     <>
@@ -9,7 +26,7 @@ function App() {
         <div className='container'>
           <h1>Gif Finder</h1>
           <p>Encuentra GIFs con la API de GIPHY y React con Vite.</p>
-          <input type='text' placeholder='Buscar GIFs' />
+          <AddCategory onNewCategory={handleAddCategory} />
         </div>
       </div>
 
