@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
-import GifItem from './GifItem';
 import { useFetch } from '../hooks/useFetch';
+import GifItem from './GifItem';
+import { Spinner } from './Spinner';
 
 /**
  * GifGrid component displays a grid of GIFs based on the given category.
@@ -18,7 +19,7 @@ export const GifGrid = ({ category }) => {
   return (
     <>
       <h2>{category}</h2>
-      {isLoading && <h3>Cargando...</h3>}
+      {isLoading && <Spinner />}
       <div className='card-grid'>
         {images.map(image => (
           <GifItem key={image.id} {...image} />
