@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { AddCategory } from './components/AddCategory';
+import { GifGrid } from './components/GifGrid';
 
 function App() {
   const [categories, setCategories] = useState(['Dragon Ball']);
@@ -31,39 +32,11 @@ function App() {
       </div>
 
       <div className='container'>
-        <section className='container'>
-          {categories.map(category => (
-            <div className='category-container' key={category}>
-              <h2>{category}</h2>
-              <div className='card-grid'>
-                <div className='card'>
-                  <img src='https://placehold.co/600x400/png' alt='Image' />
-                  <p>
-                    Laboris proident eiusmod ex sint qui incididunt nostrud anim in magna.
-                  </p>
-                </div>
-                <div className='card'>
-                  <img src='https://placehold.co/600x400/png' alt='Image' />
-                  <p>
-                    Laboris proident eiusmod ex sint qui incididunt nostrud anim in magna.
-                  </p>
-                </div>
-                <div className='card'>
-                  <img src='https://placehold.co/600x400/png' alt='Image' />
-                  <p>
-                    Laboris proident eiusmod ex sint qui incididunt nostrud anim in magna.
-                  </p>
-                </div>
-                <div className='card'>
-                  <img src='https://placehold.co/600x400/png' alt='Image' />
-                  <p>
-                    Laboris proident eiusmod ex sint qui incididunt nostrud anim in magna.
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </section>
+        {categories.map(category => (
+          <div className='category-container' key={category}>
+            <GifGrid category={category} />
+          </div>
+        ))}
       </div>
     </>
   );
