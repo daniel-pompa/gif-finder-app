@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { getGifs } from '../utils/get-gifs';
+import GifItem from './GifItem';
 
 /**
  * GifGrid component displays a grid of GIFs based on the given category.
@@ -31,10 +32,7 @@ export const GifGrid = ({ category }) => {
       <h2>{category}</h2>
       <div className='card-grid'>
         {images.map(image => (
-          <div className='card' key={image.id}>
-            <img src={image.url} alt={image.title} />
-            <p>{image.title}</p>
-          </div>
+          <GifItem key={image.id} {...image} />
         ))}
       </div>
     </>
