@@ -18,7 +18,7 @@ The primary goal of this project is to explore and demonstrate the practical imp
 5. [Installation](#installation)
 6. [Usage](#usage)
 7. [Hooks](#hooks)
-8. [Demo](#demo)
+8. [Demo](#live-demo)
 9. [Contributing](#contributing)
 10. [License](#license)
 11. [Author](#author)
@@ -167,9 +167,15 @@ Once the development server is running, you can open your browser and navigate t
 > - **No Results**: If you don't see any results, try a different search term or check your internet connection.
 > - **Loading Issues**: If the GIFs are not loading, ensure that your development server is running correctly and check the console for any errors.
 
-## Demo
+## Live Demo
 
-You can view a live demo of the application by visiting the following URL: [GIF Finder Demo](https://gif-finder-app-alpha.vercel.app/).
+Explore the live demo of the application at the following link: [View GIF Finder Demo](https://gif-finder-app-alpha.vercel.app/)
+
+<div>
+  <img src="./src/assets/images/dragon-ball.gif" alt="Dragon Ball GIF" width="300" height="200">
+</div>
+
+Discover the features live and see the app in action!
 
 ## Contributing
 
