@@ -18,10 +18,11 @@ The primary goal of this project is to explore and demonstrate the practical imp
 5. [Installation](#installation)
 6. [Usage](#usage)
 7. [Hooks](#hooks)
-8. [Contributing](#contributing)
-9. [License](#license)
-10. [Author](#author)
-11. [Acknowledgements](#acknowledgements)
+8. [Demo](#demo)
+9. [Contributing](#contributing)
+10. [License](#license)
+11. [Author](#author)
+12. [Acknowledgements](#acknowledgements)
 
 ## Features
 
@@ -165,6 +166,10 @@ Once the development server is running, you can open your browser and navigate t
 >
 > - **No Results**: If you don't see any results, try a different search term or check your internet connection.
 > - **Loading Issues**: If the GIFs are not loading, ensure that your development server is running correctly and check the console for any errors.
+
+## Demo
+
+You can view a live demo of the application by visiting the following URL: [GIF Finder Demo](https://gif-finder-app-alpha.vercel.app/).
 
 ## Contributing
 
