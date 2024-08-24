@@ -124,7 +124,7 @@ npm run dev
 
 ```js
 import { useEffect, useState } from 'react';
-import { getGifs } from '../helpers/getGifs';
+import { getGifs } from '../utils';
 
 export const useFetch = category => {
   const [images, setImages] = useState([]);
@@ -144,6 +144,35 @@ export const useFetch = category => {
     images,
     isLoading,
   };
+};
+```
+
+### Example
+
+```js
+import PropTypes from 'prop-types';
+import { useFetch } from '../hooks/useFetch';
+import GifItem from './GifItem';
+import { Spinner } from './Spinner';
+
+export const GifGrid = ({ category }) => {
+  const { images, isLoading } = useFetch(category);
+
+  return (
+    <>
+      <h2>{category}</h2>
+      {isLoading && <Spinner />}
+      <div className='card-grid'>
+        {images.map(image => (
+          <GifItem key={image.id} {...image} />
+        ))}
+      </div>
+    </>
+  );
+};
+
+GifGrid.propTypes = {
+  category: PropTypes.string.isRequired,
 };
 ```
 
