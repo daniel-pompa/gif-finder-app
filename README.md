@@ -198,7 +198,7 @@ Once the development server is running, you can open your browser and navigate t
 
 ## Live Demo
 
-Explore the live demo of the application at the following link: [View GIF Finder Demo](https://gif-finder-app-alpha.vercel.app/)
+Explore the live demo of the application at the following link: [GIF Finder](https://gif-finder-react.vercel.app/)
 
 <div>
   <img src="./src/assets/images/dragon-ball.gif" alt="Dragon Ball GIF" width="300" height="200">
